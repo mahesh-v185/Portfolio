@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Light, creative color palette */
+    --background: 30 20% 98%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    /* Coral/peach primary */
+    --primary: 355 78% 65%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Soft blue secondary */
+    --secondary: 199 89% 62%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Mint accent */
+    --accent: 158 64% 72%;
+    --accent-foreground: 240 10% 15%;
+
+    --muted: 30 15% 92%;
+    --muted-foreground: 240 5% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 355 78% 65%;
+
+    --radius: 1rem;
+
+    /* Custom design tokens */
+    --gradient-coral: linear-gradient(135deg, hsl(355, 78%, 65%), hsl(345, 82%, 70%));
+    --gradient-blue: linear-gradient(135deg, hsl(199, 89%, 62%), hsl(210, 98%, 68%));
+    --gradient-mint: linear-gradient(135deg, hsl(158, 64%, 72%), hsl(170, 60%, 75%));
+    --gradient-hero: linear-gradient(135deg, hsl(355, 78%, 65%) 0%, hsl(199, 89%, 62%) 50%, hsl(158, 64%, 72%) 100%);
+    
+    --shadow-soft: 0 4px 24px -2px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 8px 32px -4px rgba(0, 0, 0, 0.12);
+    --shadow-glow-coral: 0 8px 32px -4px hsla(355, 78%, 65%, 0.25);
+    --shadow-glow-blue: 0 8px 32px -4px hsla(199, 89%, 62%, 0.25);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
